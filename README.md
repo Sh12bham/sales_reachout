@@ -1,39 +1,17 @@
-# sales_reachout
-# 🧠 AI-Powered Lead Generation Dashboard
+# AI Email Generator
 
-This project is an intelligent dashboard that automates **lead generation and enrichment** by integrating multiple APIs such as SerpAPI, GitHub API, NewsAPI, RocketReach, Proxycurl, and Apollo.io. It extracts company details, key decision-makers, ongoing projects, and contact info using AI to assist sales and marketing teams.
+A web application for generating personalized emails using the OpenRouter Qwen2.5 model.
 
----
+## Environment Variables
 
-## 🔍 Features
+This application requires an OpenRouter API key to function.
 
-- 🔎 Search companies or keywords to discover potential leads
-- 📰 Extract latest news and projects from trusted sources (NewsAPI)
-- 👨‍💼 Fetch company professionals (Sales, Marketing, Tech, etc.)
-- 💼 Pull GitHub project data, activity, and repos
-- 📇 Enrich leads using RocketReach, Proxycurl, and Apollo
-- 📊 Beautiful, interactive dashboard for data analysis and filtering
-- 🧠 AI-powered prompt generation for personalized outreach
+**Important:** Before running the application locally, you must set the OPENROUTER_API_KEY environment variable.
 
----
+Create a .env file in the project root with:
+OPENROUTER_API_KEY=your-api-key-here
 
-## 🛠️ Tech Stack
+## Troubleshooting
 
-| Component                | Technology Used |
-|--------------------------|-----------------|
-| Frontend                 | React.js + Tailwind CSS |
-| Backend / API Handling   | Node.js + Express |
-| AI / Prompt Generation   | OpenAI / LangChain |
-| Authentication (if any)  | Firebase Auth / Auth0 (optional) |
-| Data Visualization       | Chart.js / Recharts |
-| API Integrations         | SerpAPI, GitHub API, NewsAPI, RocketReach, Proxycurl, Apollo.io |
-| Deployment               | Vercel / Netlify / Render |
-
----
-
-## ⚙️ Setup Instructions
-
-1. Clone the repo  
-```bash
-git clone https://github.com/your-username/ai-lead-gen-dashboard.git
-cd ai-lead-gen-dashboard
+- If you see an error about "OPENROUTER_API_KEY environment variable is not set", make sure you've created the .env file with your API key.
+- If emails aren't generating correctly, ensure the CSV file has the proper format with NAME and COMPANY NAME columns filled in.
